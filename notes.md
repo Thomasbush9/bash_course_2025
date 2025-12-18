@@ -35,4 +35,14 @@ We can use: rm -i (interactive)
 **Man pages**
 
 
+- file text.txt it tells you what kind of file it is 
+
+- tr (translate ) : echo $PATH | tr : "/n"
+
+- "$PATH" is a random variable 
+
+thing=$(uname -a)
+
+This is the format to assign the value of the result of what is in the parenthesis to the variable thing. 
+
 
