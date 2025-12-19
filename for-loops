@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#it expandit from a to f (including), it works with numbers
+max=5
+# for thing in {a..f}; do
+#     echo "thing is $thing"
+# done
+#
+#We can have c style math in bast inside double parenthesis
+for ((i = 0; i < max; i++)); do
+    echo "thing is $i"
+done
+

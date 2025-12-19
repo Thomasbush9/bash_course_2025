@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+#if ....; then
+if [[ -n $1 ]]; then
+    name=$1
+else
+    read -p 'enter your name: ' name
+fi
+
+#read -p 'Enter your name: ' name
+echo "Hello $name"

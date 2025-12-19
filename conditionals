@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# while [[ -f file.txt ]]; do
+#     echo "file.txt exist and it is a file"
+#     sleep 1
+# done
+#
+echo "file is gone"
+
+# you can also use commands:
+if echo hi; then
+    echo "if statement was true"
+fi
+
+

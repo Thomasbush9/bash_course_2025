@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+#r is going to read raw input, read it reads only the first line
+while read -r line; do
+    #true is like pass or :
+    echo "We read line $line"
+
+done
+

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+greet() {
+    local name=$1
+    echo "hello $name"
+}
+# keep in mind that var in funcitons are global
+for name in $@; do
+    greet "$name"  | tr a y >> file.txt
+done
+
+var=$(greet thom)
+echo $?

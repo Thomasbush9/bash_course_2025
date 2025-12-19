@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+#loop
+for thing in $@; do
+    echo "thing is $thing"
+done
+

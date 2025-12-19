@@ -42,14 +42,60 @@ We can use: rm -i (interactive)
 **Programs and Commands**
 
 
-- file text.txt it tells you what kind of file it is 
+- file text.txt it tells you what kind of file it is
 
 - tr (translate ) : echo $PATH | tr : "/n"
 
-- "$PATH" is a random variable 
+- "$PATH" is a random variable
 
-thing=$(uname -a)
+thing=\$(uname -a)
 
-This is the format to assign the value of the result of what is in the parenthesis to the variable thing. 
+This is the format to assign the value of the result of what is in the parenthesis to the variable thing.
+
+**File Permission**
+
+You need to make the ex file:
+
+- you can first check the file permission with ls -l
+- To make it executable you can do chmod +x over the file
+- we can make the script without the extension
+
+**Loops**
+
+for thing in list of things; do
+done
+
+- we can check the syntax by using bash -n script + echo \$?
+
+**Inputs**
+
+- From the user: read -p 'prompt' var
+You can enve pipe it
+
+**If statements**
+
+if ....; then
+if [[ -n $1 ]]; then
+    name=$1
+else
+    read -p 'enter your name: ' name
+fi
+
+
+- for loops we can use \$@ to take args as long as we give them to the program.
+
+ ### Functions
+
+
+true returns 0 etc.
+
+
+**Inputs**
+
+%> write a file
+%> pass to a file
+
+
+
 
 
