@@ -34,5 +34,12 @@ We can use: rm -i (interactive)
 
 **Man pages**
 
+- man gives you the manual for external commands
+- --help works for system commands (like history)
+
+## Chapter 02:
+
+**Programs and Commands**
+
 
 
