@@ -1,3 +1,31 @@
 #!/usr/bin/env bash
 
 
+# grep -c would count the words in grep 
+# i=0
+# for word in $words; do 
+#   echo "$word"
+#   ((i++))
+# done 
+# echo "Found $i"
+i=0
+# everything on the right of the pipe runs in the subshell, we can avoid that by 
+# using process substituion
+grep d /home/twb/Documents/notes/screen_docs.md | while read -r word; do 
+  echo "$word"
+  ((i++))
+done
+echo "Found $i words with d"
+#use herestring
+#In this case we are storing everything in memory, while the above case batches them 
+# while read -r word; do 
+#   echo "$word"
+#   ((i++))
+# done <<< "$words"
+#
+# echo "Found $i words"
+while read -r word; do 
+  echo "$word"
+  ((i++))
+done < <(grep d /home/twb/Documents/notes/screen_docs.md)
+echo "Found $i words with d "
