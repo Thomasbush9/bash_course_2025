@@ -124,5 +124,8 @@ They only match the first positive case, otherwise you can use: ;&
 
 ### Indexed Arrays 
 
+cmd=$1 
+shift 
 
+then we can use case statements over the first argument and use the remaining as 0 as we have shifted them 
 
