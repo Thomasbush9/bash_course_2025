@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+thing=$(( 2 + 2))
+
+#check the var to be int 
+echo "thing is $thing"
+
+#math supports only integers 
+i=2
+((i*=5))
+echo "i=$i"
+# when the answer in math expression is 0 it is considered a failure
+

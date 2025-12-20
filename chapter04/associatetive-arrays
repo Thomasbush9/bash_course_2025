@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+declare -A arr
+
+arr[foo]=1
+arr[bar]=2
+arr[baz]=3
+
+echo "${arr[foo]}"
+
+
+# loop array 
+for item in "${arr[@]}";do
+  echo $item
+done
+
+# loop over the keys
+#
+echo "${!arr[*]}"
+for key in "${!arr[@]}"; do 
+  #here the key must be put with $
+  value=${arr[$key]}
+  echo "got $key = $value"
+done

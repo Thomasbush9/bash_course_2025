@@ -96,6 +96,33 @@ true returns 0 etc.
 %> pass to a file
 
 
+**Cases**
+
+We can start them as: 
+
+#!/usr/bin/env bash
+
+s=$1
+
+case "$s" in
+  dave)
+    echo hi dave
+    ;;
+  buddy)
+    echo ohh there he is 
+    ;;
+  guy)
+    echo hello
+    ;;
+esac
+
+They only match the first positive case, otherwise you can use: ;&
+
+- ;; fist 
+- ;& moves on 
+- ;;& it tries until it finds the right ones 
+
+### Indexed Arrays 
 
 
 
