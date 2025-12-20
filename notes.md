@@ -96,6 +96,11 @@ true returns 0 etc.
 %> pass to a file
 
 
+\$# is the sum ofhte arguments given
 
+>&2 we are redirecting to the file descriptor 2
 
+exit 1 breaks the script + code 1
+
+d*= check name starts with d
 
