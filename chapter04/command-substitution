@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+##we use the `` to assign commands
+#thing=`whoami`
+#
+#echo "thing is $thing"
+##best practice
+#echo "$(echo $(whoami))"
+
+#mini program
+i=5
+my-func(){
+  i=6
+  echo hi
+}
+#here we are using a subshell, without the parethesis we can modify the global scope
+thing=$(my-func)
+echo "thing is $thing"
+echo "$i"

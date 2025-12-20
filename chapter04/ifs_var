@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+
+array=(
+  foo 
+  bar 
+  baz
+)
+
+
+#you can decide how bash string vars 
+IFS=,
+
+echo "${array[*]}"
