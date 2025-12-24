@@ -106,3 +106,46 @@ d*= check name starts with d
 
 
 Shift move the array of arguments by one 
+
+
+## Useful commands to parse data:
+
+cat simple.csv | tr , '\t'
+
+cat simple.csv | cut -d , -f 1  (here we are extracting the first field)
+
+**sed, awk, and grep**
+
+sed 's/input/new_input/' it supports regex patterns: i..e 
+
+sed -e for multiple expression 
+
+Instead of the / we can also use the # character. 
+
+sed 's#/bin/bahs#/bin/fish#'
+
+
+**awk**
+
+awk -F: '{print $1 $7}'
+
+-F selects the delimiter (default is blank space)
+- then we take the fields and print them
+- we can put a conditional: awk -F: $1 == 'word' {print $1 $3}
+- we can pass the results to | sort to sort the data 
+- unique commands keeps only the uniques, while unique -c counts the uniques 
+- wc -w (words) -c (character)
+
+
+**find**
+
+find dir -type f -name name -exec (to execute a command:)
+
+
+
+
+
+
+
+
+
