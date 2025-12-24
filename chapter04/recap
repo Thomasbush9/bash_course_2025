@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+
+process-indexed() {
+  local arguments=("$@")
+  echo "Found: ${#arguments[@]} arguments"
+  
+  local IFS=,
+  echo "${arguments[*]}"
+}
+
+# function to print only unique items: 
+process-associative() {
+  local arguments=("$@")
+  echo "Found: ${#arguments[@]} arguments"
+# declare array var  then for each elements of input array assign it as key to val 1 
+  declare -A unique 
+  local item 
+  for item in "${arguments[@]}"; do 
+    unique[$item]=1
+  done 
+
+  echo "found ${#unique[@]} unique arguments"
+}
+
+process-commands(){
+  local arguments=("$@")
+  echo "Found: ${#arguments[@]} arguments"
+
+  local item 
+  for item; do 
+    echo "running command: $item"
+    "$item"
+  done 
+
+}
+
+cmd=$1
+shift 
+
+case  "$cmd" in 
+  indexed)
+    process-indexed "$@"
+    ;;
+  associative)
+    process-associative "$@"
+    ;;
+  commands)
+    process-commands "$@"
+    ;;
+  *)
+    echo "Unknown cmd: $cmd >&2"
+    exit 1
+    ;;
+esac
+

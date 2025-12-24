@@ -104,3 +104,5 @@ exit 1 breaks the script + code 1
 
 d*= check name starts with d
 
+
+Shift move the array of arguments by one 
